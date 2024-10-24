@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import { Range } from "../Range/range";
 
 export const Menu = ({ setImage, image }) => {

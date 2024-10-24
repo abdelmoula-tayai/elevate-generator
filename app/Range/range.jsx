@@ -1,9 +1,19 @@
+import { useState } from "react";
+
 export const Range = ({ name, value }) => {
   const [settings, setSettings] = useState({
     padding: 16,
     shadow: 10,
     radius: 16,
   });
+
+  const handleChange = (e) => {
+    setSettings((prevSettings) => ({
+      ...prevSettings,
+      [name]: Number(e.target.value),
+    }));
+  };
+
   return (
     <input
       className="range range-primary w-full my-3"
@@ -12,7 +22,7 @@ export const Range = ({ name, value }) => {
       min={0}
       max={99}
       value={value}
-      onChange={(e) => setSettings(value, Number(e.target.value))}
+      onChange={handleChange}
     />
   );
 };
