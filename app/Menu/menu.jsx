@@ -3,8 +3,6 @@ import { useState } from "react";
 import { Range } from "../Range/range";
 
 export const Menu = ({ setImage, image }) => {
-  const [settings, setSettings] = useState({});
-
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
