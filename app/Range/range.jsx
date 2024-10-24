@@ -1,12 +1,4 @@
-import { useState } from "react";
-
-export const Range = ({ name, value }) => {
-  const [settings, setSettings] = useState({
-    padding: 16,
-    shadow: 10,
-    radius: 16,
-  });
-
+export const Range = ({ name, value, setSettings }) => {
   const handleChange = (e) => {
     setSettings((prevSettings) => ({
       ...prevSettings,

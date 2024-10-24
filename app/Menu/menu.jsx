@@ -1,6 +1,6 @@
 import { Range } from "../Range/range";
 
-export const Menu = ({ setImage, image }) => {
+export const Menu = ({ setImage, setSettings }) => {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -10,6 +10,8 @@ export const Menu = ({ setImage, image }) => {
       img.onload = () =>
         setImage({
           src: img.src,
+          width: img.width,
+          height: img.height,
         });
       img.src = reader.result;
     };
@@ -28,11 +30,11 @@ export const Menu = ({ setImage, image }) => {
         onChange={handleImageUpload}
       />
       <p>padding</p>
-      <Range name={"padding"} />
+      <Range name={"padding"} setSettings={setSettings} />
       <p>shadow</p>
-      <Range name={"shadow"} />
+      <Range name={"shadow"} setSettings={setSettings} />
       <p>radius</p>
-      <Range name={"radius"} />
+      <Range name={"radius"} setSettings={setSettings} />
     </div>
   );
 };
