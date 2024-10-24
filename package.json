@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.1.0",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "fs": "^0.0.1-security",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021"
+    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "satori": "^0.11.2"
   },
   "devDependencies": {
     "daisyui": "^4.12.13",

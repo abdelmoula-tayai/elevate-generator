@@ -12,6 +12,7 @@ export const Menu = ({ setImage, setSettings }) => {
           src: img.src,
           width: img.width,
           height: img.height,
+          name: file.name,
         });
       img.src = reader.result;
     };
