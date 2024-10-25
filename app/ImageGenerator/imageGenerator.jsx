@@ -2,10 +2,8 @@ export const ImageGenerator = ({ settings, image }) => {
   return (
     <div
       style={{
-        padding: settings.padding,
         display: "flex",
-        maxWidth: 400,
-        boxSizing: "border-box",
+        padding: settings.padding,
       }}
     >
       {image !== null ? (
@@ -18,7 +16,6 @@ export const ImageGenerator = ({ settings, image }) => {
           }}
           src={image.src}
           alt=""
-          width={image.width}
         />
       ) : (
         <p>Upload an image first.</p>
