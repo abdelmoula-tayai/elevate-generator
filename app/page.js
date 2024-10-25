@@ -1,4 +1,5 @@
 "use client";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useState } from "react";
 import { ImageGenerator } from "./ImageGenerator/imageGenerator";
 import { Menu } from "./Menu/menu";
@@ -109,6 +110,7 @@ export default function Home() {
           <span className="loading loading-spinner loading-sm"></span>
         ) : null}
       </button>
+      <SpeedInsights />
     </div>
   );
 }
