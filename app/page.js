@@ -50,11 +50,19 @@ export default function Home() {
     const url = URL.createObjectURL(blob);
 
     if (isCopying) {
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          ["image/png"]: blob,
-        }),
-      ]);
+      if (navigator.clipboard && navigator.clipboard.write) {
+        try {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              ["image/png"]: blob,
+            }),
+          ]);
+        } catch (err) {
+          alert("Failed to copy image to clipboard.");
+        }
+      } else {
+        alert("Copying to clipboard is not supported on this device.");
+      }
     } else {
       const a = document.createElement("a");
       a.href = url;
