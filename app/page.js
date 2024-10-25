@@ -15,7 +15,10 @@ export default function Home() {
   return (
     <div className="flex justify-center items-center flex-col">
       <Menu setImage={setImage} setSettings={setSettings} />
-      <ImageGenerator settings={settings} image={image} />
+      <div className="flex justify-center border w-3/4 py-5 mt-4 rounded-md">
+        <ImageGenerator settings={settings} image={image} />
+      </div>
+
       <button
         className="btn my-3"
         disabled={!image}
