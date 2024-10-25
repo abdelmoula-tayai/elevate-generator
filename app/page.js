@@ -72,7 +72,7 @@ export default function Home() {
         setSettings={setSettings}
         handleImageUpload={handleImageUpload}
       />
-      <div className="flex justify-center border w-3/4 py-5 mt-4 rounded-md">
+      <div className="flex justify-center border w-3/4  mt-4 rounded-md max-w-lg">
         <ImageGenerator settings={settings} image={image} />
       </div>
 
